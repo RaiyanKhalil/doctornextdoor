@@ -1,0 +1,24 @@
+import express from 'express'
+import userCtrl from '../controllers/user.controller'
+import authCtrl from '../controllers/auth.controller'
+
+const router = express.Router()
+  router.route('/signup').get(userCtrl.signup)
+  router.route('/signin').get(userCtrl.signin)
+  router.route('/profile').get(userCtrl.profile)
+  router.route('/index2').get(userCtrl.index2)
+  router.route('/admin').get(userCtrl.admin)
+  router.route('/dataentry').get(userCtrl.dataentry)
+  router.route('/location').get(userCtrl.location)
+  router.route('/api/users')
+    .get(userCtrl.list)
+    .post(userCtrl.create)
+
+  router.route('/api/users/:userId')
+    .get(authCtrl.requireSignin, userCtrl.read)
+    .put(authCtrl.requireSignin, authCtrl.hasAuthorization, userCtrl.update)
+    .delete(authCtrl.requireSignin, authCtrl.hasAuthorization, userCtrl.remove)
+
+  router.param('userId', userCtrl.userByID)
+
+export default router

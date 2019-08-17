@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="/public/style1.css" rel="stylesheet" type="text/css">
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    <!-- <script src="script.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCQUFY_QSqaDA9oTqKB5muBTxlY0KSXEgY&callback=initMap"type="text/javascript"></script>
+    -->
+    <title>Home</title>
+</head>
+<body>
+    <!-- Header -->
+    <div class="jumbo">
+        <h1>Doctor Next Door</h1>
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+              <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" href="/findDoctor">Doctors<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/location">Locations</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" class = "active" href="/dataentry" tabindex="-1"  >Data Entry</a>
+                </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+              </form>
+            </div>
+          </nav>
+    </div>
+
+    <!-- Data Entry Section -->
+    <div class="jumbotron row" class = "center" id="jumbo2">
+  
+    <div class="card col-sm-12"  style="width: 18rem;">
+      <div class="card-body">
+          <!-- <h5 class="card-header">Login</h5> -->
+
+              <div class="form-group">
+                <label for="formGroupExampleInput">Doctor Name: </label>
+                <input type="text" class="form-control" id="adminDoctorname" placeholder="User Name">
+              </div>
+              <div class="form-group">
+                <label for="formGroupExampleInput2">Email: </label>
+                <input type="text" class="form-control" id="adminEmail" placeholder="Password">
+              </div>
+              <div class="form-group">
+                <label for="formGroupExampleInput2">Speciality: </label>
+                <input type="text" class="form-control" id="adminSpecialty" placeholder="Password">
+              </div>
+              <div class="form-group">
+                <label for="formGroupExampleInput2">Area: </label>
+                <input type="text" class="form-control" id="adminArea" placeholder="Password">
+              </div>
+              <div class="form-group">
+                  <button class="btn btn-outline-dark my-2 my-sm-0" id = "adminSubmitbtn" type="submit">Submit</button>
+              </div>
+
+      </div>
+  </div>
+</div>
+
+
+    <!-- Main Content -->
+    <div>
+        <!-- Landing Page & Login  -->
+        <!-- <div class="jumbotron row" id="jumbo2">
+            <div class="col-sm-8">
+                <h3 id="heading1">Doctor Next Door</h3>
+                <p id="heading1">Are you having trouble finding the right doctor for yourself? <br>
+                Do you have to go the other side of town to go see a doctor? <br>
+                You just came to the right place. Put in you location & speciality and we will tell you where the doctor is near you.</p>
+            </div>
+            <div class="card col-sm-2" style="width: 18rem;">
+                <div class="card-body">
+                    <h5 class="card-header">Login</h5>
+                    <form>
+                        <div class="form-group">
+                          <label for="formGroupExampleInput">User Name: </label>
+                          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="User Name">
+                        </div>
+                        <div class="form-group">
+                          <label for="formGroupExampleInput2">Password: </label>
+                          <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Login</button>
+                        </div>
+                      </form>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- Map Section -->
+        <div class="container " id="map"></div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+
+    </div>
+
+    <!-- Your site content here -->
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+    
+    <script>
+      $("#adminSubmitbtn").click(function(event){
+        alert("LET ME OUT!!!")
+        var doctor = {
+              name: $("#adminDoctorname").val(),
+              email: $("#adminEmail").val(),
+              specialty: $("#adminSpecialty").val(),
+              area: $("#adminArea").val()
+          }
+          $.ajax({
+              url: "/api/doctors",
+              method: "POST",
+              data: doctor
+          }).done(function(response){
+              alert("Data Entered");
+              console.log(response);
+          }).fail(function(response){
+            alert("FAILED")
+              console.log(response)
+          })
+      });
+
+      </script>
+
+</body>
+</html>
