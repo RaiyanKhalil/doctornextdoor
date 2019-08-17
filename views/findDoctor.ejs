@@ -102,25 +102,19 @@
     <!-- Scripts -->
     <script>
         var doctors = <%- JSON.stringify(doctor) %>;
-        //var Stringify = JSON.parse(doctors)
         console.log(doctors)
 
           $('#search').keyup(function(){
             var searchValue = ($('#search').val()).trim();
-            //console.log(searchValue)
-            if((doctors[i]) == searchValue){
-              console.log(doctors[i])
+            /* Search function to filter the array of doctors by comparing the search value against name and specialty */
+            var results = doctors.filter(doctor => {
+              return doctor.name.toLowerCase().includes(searchValue.toLowerCase()) || doctor.specialty.toLowerCase().includes(searchValue.toLowerCase())
+            })
+            console.log(results) /* this contains the result doctors in an array */
 
-            }
-            for(var i = 0; i < doctors.lenght; i++){
-              if((doctors[i]['specialty']) == 'Medicine'){
-              console.log(doctors[i]['name'])
-
-            }
-            else{
-              console.log("NOOOOOO")
-            }
-            }
+            /* 1. Hide the old list (using jQuery) */
+            /* 2. Create the new view with this new list (use jQuery, as in the Shopping cart classwork) */
+            /* 3. If the results array is empty, show 'no results' */
 
           })
           //console.log(doctors[i]['name'])
