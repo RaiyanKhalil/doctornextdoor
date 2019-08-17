@@ -22,6 +22,12 @@ const admin = (req, res) => {
 const dataentry = (req, res) => {
   res.status(200).sendFile(process.cwd()+'/client/dataentry.html')  
 }
+const appointment = (req, res) => {
+   res.status(200).sendFile(process.cwd()+'/client/appointment.html')  
+  //return res.redirect('/client/appointment.html')
+  //res.status(200).render('/client/appointment.ejs')  
+
+}
 
 const location = (req, res) => {
   res.status(200).sendFile(process.cwd()+'/client/location.html')  
@@ -114,5 +120,6 @@ export default {
   index2,
   admin,
   dataentry,
-  location
+  location,
+  appointment
 }

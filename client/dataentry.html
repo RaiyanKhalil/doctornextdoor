@@ -72,6 +72,19 @@
                 <input type="text" class="form-control" id="adminArea" placeholder="Password">
               </div>
               <div class="form-group">
+                  <label for="formGroupExampleInput2">Latitude: </label>
+                  <input type="text" class="form-control" id="adminLati" placeholder="Password">
+                </div>
+              
+              <!-- <div class="form-group">
+                  <label for="formGroupExampleInput2">Latitude: </label>
+                  <input type="text" class="form-control" id="adminLat" placeholder="Latitude">
+                </div> -->
+              <div class="form-group">
+                  <label for="formGroupExampleInput2">Longitude: </label>
+                  <input type="text" class="form-control" id="adminLong" placeholder="Longitude">
+                </div>
+              <div class="form-group">
                   <button class="btn btn-outline-dark my-2 my-sm-0" id = "adminSubmitbtn" type="submit">Submit</button>
               </div>
 
@@ -132,7 +145,9 @@
               name: $("#adminDoctorname").val(),
               email: $("#adminEmail").val(),
               specialty: $("#adminSpecialty").val(),
-              area: $("#adminArea").val()
+              area: $("#adminArea").val(),
+              lat: $("#adminLati").val(),
+              long: $("#adminLong").val()
           }
           $.ajax({
               url: "/api/doctors",

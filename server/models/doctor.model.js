@@ -23,6 +23,18 @@ const doctorSchema = new mongoose.Schema({
     trim: true,
     required: 'Area is required'
   },
+  lat: {
+    type: Number,
+    trim: true,
+    required: 'Latitude is required'
+  },
+
+  long: {
+    type: Number,
+    trim: true,
+    required: 'Longitude is required'
+  },
+
   updated: Date,
   created: {
     type: Date,

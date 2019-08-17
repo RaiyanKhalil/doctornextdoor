@@ -1,6 +1,7 @@
 import express from 'express'
 import userCtrl from '../controllers/user.controller'
 import authCtrl from '../controllers/auth.controller'
+//import userid from './views/findDoctor.ejs'
 
 const router = express.Router()
   router.route('/signup').get(userCtrl.signup)
@@ -10,6 +11,9 @@ const router = express.Router()
   router.route('/admin').get(userCtrl.admin)
   router.route('/dataentry').get(userCtrl.dataentry)
   router.route('/location').get(userCtrl.location)
+  router.route('/appointment').get(userCtrl.appointment)
+  
+
   router.route('/api/users')
     .get(userCtrl.list)
     .post(userCtrl.create)
